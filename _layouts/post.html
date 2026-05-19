@@ -31,8 +31,24 @@ layout: default
     
     <div class="share">
       <p>Bu yazıyı paylaşın:</p>
-      <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" target="_blank">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://api.whatsapp.com/send?text={{ page.title | url_encode }}%20{{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener">WhatsApp</a>
     </div>
+    
+    <!-- Related Posts -->
+    {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" | limit: 3 %}
+    {% if related_posts.size > 0 %}
+    <div class="related-posts" style="margin-top: 32px;">
+      <h3>İlgili Yazılar</h3>
+      {% for post in related_posts %}
+      <div style="margin-bottom: 12px;">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span style="color: #6b7280; font-size: 0.875rem;"> - {{ post.date | date: "%d %B %Y" }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
   </footer>
 </article>
