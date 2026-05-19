@@ -1,4 +1,5 @@
 ---
 theme: minima
 future: true
+permalink: /:title.html
 ---
