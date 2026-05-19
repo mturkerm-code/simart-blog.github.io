@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simart-blog.github.io/sitemap.xml
+
+# Şımart Teknoloji Blog - Akıllı Ev ve IoT
+# https://simart-blog.github.io
