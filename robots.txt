@@ -1,7 +1,15 @@
 User-agent: *
 Allow: /
+Allow: /*.html
+Allow: /kategori/
+Allow: /etiket/
 
-Sitemap: https://simart-blog.github.io/sitemap.xml
+Disallow: /tmp/
+Disallow: /scripts/
+Disallow: /reports/
 
-# Şımart Teknoloji Blog - Akıllı Ev ve IoT
-# https://simart-blog.github.io
+Sitemap: https://mturkerm-code.github.io/simart-blog.github.io/sitemap.xml
+
+# Şımart Teknoloji Blog - SEO Optimized
+# Türkiye'nin yerli teknoloji markası
+# https://simart.me

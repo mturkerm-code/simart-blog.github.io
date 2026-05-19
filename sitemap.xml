@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://simart-blog.github.io/</loc>
+    <loc>https://mturkerm-code.github.io/simart-blog.github.io/</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://simart-blog.github.io/about.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://simart-blog.github.io/2026/05/19/akilli-ev-teknolojileri-yerli-uretim/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://simart-blog.github.io/2026/05/20/akilli-ev-guvenlik-sistemleri/</loc>
+    <loc>https://mturkerm-code.github.io/simart-blog.github.io/robot-supurge-alma-rehberi.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://simart-blog.github.io/2026/05/20/robot-supurge-alma-rehberi/</loc>
+    <loc>https://mturkerm-code.github.io/simart-blog.github.io/akilli-priz-enerji-tasarrufu.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mturkerm-code.github.io/simart-blog.github.io/akilli-ev-guvenligi-rehberi.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mturkerm-code.github.io/simart-blog.github.io/akilli-ev-guvenlik-sistemleri.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mturkerm-code.github.io/simart-blog.github.io/akilli-ev-teknolojileri-yerli-uretim.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mturkerm-code.github.io/simart-blog.github.io/turkiye-de-ak%C4%B1ll%C4%B1-ev-pazar%C4%B1n%C4%B1n-2026-analizi.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
