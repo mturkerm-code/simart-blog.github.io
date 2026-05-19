@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.meta_description | default: page.excerpt | default: site.description }}">
+  <meta name="keywords" content="{{ page.keywords | default: page.tags | join: ',' }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.meta_description | default: page.excerpt | default: site.description }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.meta_description | default: page.excerpt | default: site.description }}">
+  <meta name="twitter:site" content="@simartteknoloji">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
+  
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --bg: #ffffff;
+      --bg-alt: #f3f4f6;
+      --border: #e5e7eb;
+      --radius: 8px;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    .site-header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .logo span { color: var(--text); }
+    
+    .nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav a:hover { color: var(--primary); }
+    
+    /* Main */
+    .main {
+      padding: 40px 0;
+    }
+    
+    /* Post Card */
+    .post-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 24px;
+      transition: box-shadow 0.2s;
+    }
+    
+    .post-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    .post-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+    
+    .post-card h2 a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    
+    .post-card h2 a:hover { color: var(--primary); }
+    
+    .post-meta {
+      color: var(--text-light);
+      font-size: 0.875rem;
+      margin-bottom: 12px;
+    }
+    
+    .post-meta .date { margin-right: 16px; }
+    
+    .post-excerpt {
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    
+    .post-tags {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .tag {
+      background: var(--bg-alt);
+      color: var(--text-light);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      text-decoration: none;
+    }
+    
+    .tag:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 40px;
+    }
+    
+    .pagination a, .pagination span {
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .pagination a {
+      background: var(--bg-alt);
+      color: var(--text);
+    }
+    
+    .pagination a:hover { background: var(--primary); color: white; }
+    
+    .pagination .current {
+      background: var(--primary);
+      color: white;
+    }
+    
+    /* Footer */
+    .site-footer {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      margin-top: 60px;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer-left p {
+      color: var(--text-light);
+      font-size: 0.875rem;
+    }
+    
+    .footer-right a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 0.875rem;
+    }
+    
+    .footer-right a:hover { color: var(--primary); }
+    
+    /* Single Post */
+    .post-header {
+      margin-bottom: 32px;
+    }
+    
+    .post-header h1 {
+      font-size: 2rem;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+    
+    .post-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    .post-content h2 {
+      font-size: 1.5rem;
+      margin: 32px 0 16px;
+      color: var(--text);
+    }
+    
+    .post-content h3 {
+      font-size: 1.25rem;
+      margin: 24px 0 12px;
+    }
+    
+    .post-content p {
+      margin-bottom: 16px;
+    }
+    
+    .post-content ul, .post-content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    
+    .post-content li {
+      margin-bottom: 8px;
+    }
+    
+    .post-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+    }
+    
+    .post-content th, .post-content td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .post-content th {
+      background: var(--bg-alt);
+      font-weight: 600;
+    }
+    
+    .post-content blockquote {
+      border-left: 4px solid var(--primary);
+      padding-left: 20px;
+      margin: 24px 0;
+      color: var(--text-light);
+      font-style: italic;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header-content { flex-direction: column; gap: 12px; }
+      .nav a { margin: 0 8px; }
+      .post-header h1 { font-size: 1.5rem; }
+      .footer-content { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="{{ '/' | relative_url }}" class="logo">Şımart<span>Blog</span></a>
+        <nav class="nav">
+          <a href="{{ '/' | relative_url }}">Ana Sayfa</a>
+          <a href="{{ '/kategori/akilli-ev' | relative_url }}">Akıllı Ev</a>
+          <a href="{{ '/kategori/robot-supurge' | relative_url }}">Robot Süpürge</a>
+          <a href="{{ '/kategori/iot' | relative_url }}">IoT</a>
+          <a href="https://simart.me" target="_blank">Mağaza</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <main class="main">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>&copy; {{ site.time | date: '%Y' }} Şımart Teknoloji. Tüm hakları saklıdır.</p>
+          <p>Türkiye'nin yerli akıllı ev teknolojileri markası.</p>
+        </div>
+        <div class="footer-right">
+          <a href="https://simart.me" target="_blank">simart.me</a>
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

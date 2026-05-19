@@ -1,0 +1,63 @@
+title: "Şımart Teknoloji - Akıllı Ev ve IoT Blog"
+description: "Türkiye'nin yerli teknoloji markası Şımart Teknoloji'den akıllı ev sistemleri, robot süpürgeler, IoT cihazları ve dijital dönüşüm hakkında güncel bilgiler, ipuçları ve karşılaştırmalar."
+url: "https://simart-blog.github.io"
+baseurl: ""
+author:
+  name: "Şımart Teknoloji"
+  email: "destek@simart.me"
+  twitter: "simartteknoloji"
+  linkedin: "simart-teknoloji"
+
+# Jekyll Ayarları
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-archives
+
+theme: minima
+
+# Sayfalama
+paginate: 10
+paginate_path: "/sayfa/:num/"
+
+# Kategoriler ve Etiketler
+category_archive:
+  path: /kategori/
+tag_archive:
+  path: /etiket/
+
+# Varsayılan Değerler
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Şımart Teknoloji"
+      comments: true
+
+# Dışa Aktarma
+feed:
+  posts_limit: 20
+
+# SEO
+twitter:
+  username: simartteknoloji
+  card: summary_large_image
+
+# Dili
+lang: tr
+locale: tr_TR
+
+# Site Meta
+logo: "/assets/images/simart-logo.png"
+favicon: "/assets/images/favicon.ico"
+
+# Google Analytics (isteğe bağlı)
+# google_analytics: G-XXXXXXXXXX
+
+# Dış Bağlantılar
+disqus:
+  shortname: simart-blog

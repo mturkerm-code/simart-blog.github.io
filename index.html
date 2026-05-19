@@ -1,0 +1,64 @@
+---
+layout: default
+title: Ana Sayfa
+---
+
+<div class="hero">
+  <h1>Akıllı Ev Teknolojileri ve IoT Blog</h1>
+  <p>Türkiye'nin yerli teknoloji markası Şımart Teknoloji'den akıllı ev sistemleri, robot süpürgeler ve nesnelerin interneti hakkında güncel bilgiler, karşılaştırmalar ve pratik ipuçları.</p>
+</div>
+
+<style>
+.hero {
+  text-align: center;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+.hero p {
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+</style>
+
+{% if paginator.posts %}
+  {% for post in paginator.posts %}
+  <article class="post-card">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <div class="post-meta">
+      <span class="date">{{ post.date | date: "%d %B %Y" }}</span>
+      {% if post.author %}<span class="author">{{ post.author }}</span>{% endif %}
+    </div>
+    <div class="post-excerpt">
+      {{ post.excerpt | strip_html | truncatewords: 50 }}
+    </div>
+    {% if post.tags %}
+    <div class="post-tags">
+      {% for tag in post.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+  {% endfor %}
+
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">← Önceki</a>
+    {% endif %}
+    <span class="current">Sayfa {{ paginator.page }} / {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Sonraki →</a>
+    {% endif %}
+  </div>
+  {% endif %}
+{% else %}
+  <p>Henüz yazı bulunmuyor.</p>
+{% endif %}

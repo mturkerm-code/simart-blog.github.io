@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+    <div class="post-meta">
+      <span class="date">{{ page.date | date: "%d %B %Y" }}</span>
+      {% if page.author %}
+      <span class="author">{{ page.author }}</span>
+      {% endif %}
+    </div>
+    {% if page.tags %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+  
+  <div class="post-content">
+    {{ content }}
+  </div>
+  
+  <footer class="post-footer">
+    <hr>
+    <p><strong>Şımart Teknoloji</strong> - Türkiye'nin yerli akıllı ev teknolojileri markası. 
+    <a href="https://simart.me" target="_blank">simart.me</a>'den ürünlerimizi keşfedin.</p>
+    
+    <div class="share">
+      <p>Bu yazıyı paylaşın:</p>
+      <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" target="_blank">Twitter</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+</article>
