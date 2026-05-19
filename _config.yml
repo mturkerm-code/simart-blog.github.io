@@ -1,6 +1,7 @@
 title: "Şımart Teknoloji - Akıllı Ev ve IoT Blog"
 description: "Türkiye'nin yerli teknoloji markası Şımart Teknoloji'den akıllı ev sistemleri, robot süpürgeler, IoT cihazları ve dijital dönüşüm hakkında güncel bilgiler, ipuçları ve karşılaştırmalar."
 url: "https://mturkerm-code.github.io/simart-blog.github.io"
+permalink: /:year/:month/:day/:title/
 baseurl: ""
 author:
   name: "Şımart Teknoloji"
