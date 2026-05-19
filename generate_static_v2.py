@@ -128,6 +128,22 @@ template = """<!DOCTYPE html>
     <meta name="description" content="{description}">
     <meta name="keywords" content="{keywords}">
     <meta name="author" content="{author}">
+    
+    <!-- Google Analytics 4 (gtag.js) - Measurement ID: G-PLACEHOLDER -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-PLACEHOLDER', {{send_page_view: true}});
+    </script>
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="GSC-PLACEHOLDER" />
+    
+    <!-- Bing Webmaster Tools Verification -->
+    <meta name="msvalidate.01" content="BING-PLACEHOLDER" />
+    
     <meta property="og:title" content="{title}">
     <meta property="og:description" content="{description}">
     <meta property="og:type" content="article">
