@@ -1,32 +1,26 @@
-title: "Şımart Teknoloji - Akıllı Ev ve IoT Blog"
-description: "Türkiye'nin yerli teknoloji markası Şımart Teknoloji'den akıllı ev sistemleri, robot süpürgeler, IoT cihazları ve dijital dönüşüm hakkında güncel bilgiler, ipuçları ve karşılaştırmalar."
-url: "https://mturkerm-code.github.io/simart-blog.github.io"
-permalink: /:year/:month/:day/:title/
-baseurl: ""
+---
+title: Şımart Teknoloji - Akıllı Ev ve IoT Blog
+description: Türkiye'nin yerli teknoloji markası Şımart Teknoloji'den akıllı ev sistemleri, robot süpürgeler, IoT cihazları ve dijital dönüşüm hakkında güncel bilgiler.
+url: https://mturkerm-code.github.io/simart-blog.github.io
+baseurl: /simart-blog.github.io
 author:
-  name: "Şımart Teknoloji"
-  email: "destek@simart.me"
-  twitter: "simartteknoloji"
-  linkedin: "simart-teknoloji"
+  name: Şımart Teknoloji
+  email: destek@simart.me
 
 # Jekyll Ayarları
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
 
-theme: minima
-
 # Sayfalama
 paginate: 10
 paginate_path: "/sayfa/:num/"
 
-# Kategoriler ve Etiketler
-category_archive:
-  path: /kategori/
-tag_archive:
-  path: /etiket/
+# Dili
+lang: tr
 
 # Varsayılan Değerler
 defaults:
@@ -36,28 +30,4 @@ defaults:
     values:
       layout: "post"
       author: "Şımart Teknoloji"
-      comments: true
-
-# Dışa Aktarma
-feed:
-  posts_limit: 20
-
-# SEO
-twitter:
-  username: simartteknoloji
-  card: summary_large_image
-
-# Dili
-lang: tr
-locale: tr_TR
-
-# Site Meta
-logo: "/assets/images/simart-logo.png"
-favicon: "/assets/images/favicon.ico"
-
-# Google Analytics (isteğe bağlı)
-# google_analytics: G-XXXXXXXXXX
-
-# Dış Bağlantılar
-disqus:
-  shortname: simart-blog
+---
