@@ -1,0 +1,104 @@
+{
+  "tweets": [
+    {
+      "id": 1,
+      "text": "6 aydır robot süpürge kullanıyorum, ilk 3 ay süperdi sonra performans düştü. Sebep: filtreyi hiç temizlememiştim. Haftada 1 bakım = ilk günkü gibi. Detaylı bakım rehberi hazırlıyorum 🧹 #robotsüpürge #evbakımı",
+      "category": "bakım"
+    },
+    {
+      "id": 2,
+      "text": "Akıllı ev cihazları alırken en çok dikkat ettiğim şey: Türkçe uygulama ve yerel sunucu. Yurtdışından call center'a bağlanmak 3 hafta sürüyor, servis 48 saatte kapımda olmalı. Yerli üretici avantajı burada ortaya çıkıyor. #akıllıev #yerliüretim",
+      "category": "yerli"
+    },
+    {
+      "id": 3,
+      "text": "Robot süpürge mi elektrikli süpürge mi? 3 yıllık maliyet analizimi yaptım. Enerji + sarf malzemesi + bakım + zaman maliyeti. Sonuç: robot süpürge 18 ayda kendini amorti ediyor. Detaylar blogda 👇 #robotsüpürge #maliyetanalizi",
+      "category": "karşılaştırma"
+    },
+    {
+      "id": 4,
+      "text": "Akıllı priz kurduktan sonra elektrik faturam %34 düştü. TV, modem, şarj aletleri gece 12'den sabah 6'ya tamamen kesiliyor. Uygulamadan anlık tüketim görülebiliyor — bilgisayar monitörüm günde 0.8 kWh standby yaktığını görünce şok oldum. #enerjitasarrufu",
+      "category": "tasarruf"
+    },
+    {
+      "id": 5,
+      "text": "Robot süpürge alırken lidar mı kameralı mı? 8 aylık deneyimim: Lidar haritalama daha keskin, karanlıkta daha iyi çalışıyor. VSLAM (kameralı) gündüz iyi ama loş ortamda kayboluyor. Ev tipine göre tercih rehberi hazırlıyorum. #lidar #vslam #robotsüpürge",
+      "category": "teknoloji"
+    },
+    {
+      "id": 6,
+      "text": "Türkiye'de akıllı ev penetrasyonu %12'den %23'e çıktı (2023-2025). En çok büyüyen segment: 'giy-çalıştır' IoT cihazları. Uygulama üzerinden 5 dakikada devreye alınabilen ürünler. Türk tüketicisi Türkçe destek veren markalara yöneliyor. #iot #akıllıev",
+      "category": "trend"
+    },
+    {
+      "id": 7,
+      "text": "Robot süpürge aldıktan sonra hayatım nasıl değişti? 1) Haftada 3 saat süpürme vaktim kazandım 2) Ev her zaman temiz 3) Kedim daha rahat dolaşıyor. Tek dezavantaj: halı kenarlarında ara sıra kaçırıyor. %90 temizlik başarısı. #yaşamkalitesi",
+      "category": "deneyim"
+    },
+    {
+      "id": 8,
+      "text": "Güvenlik kamerası alırken dikkat: yerel kayıt mı bulut mu? Bulut aboneliği aylık 30-50 TL. Ben yerel kayıt + hareket algılamayı tercih ettim. 1TB hafıza kartı 3 ay kayıt tutuyor, ücret yok. #güvenlikkamerası #evgüvenliği",
+      "category": "güvenlik"
+    },
+    {
+      "id": 9,
+      "text": "Akıllı ev sensörlerini doğru yere koymak her şeyi değiştiriyor. Kapı sensörü salona değil, giriş koridoruna konulunca gece yarısı su içmeye kalktığımda ışıklar tam yoğunlukta açılmıyor, loş modda yanıyor. Detaylar her şey. #akıllıev #ipuçları",
+      "category": "ipucu"
+    },
+    {
+      "id": 10,
+      "text": "Robot süpürge batarya ömrü testi: 6 marka, 12 ay kullanım. En dayanıklısı 800 döngü sonra %85 kapasiteyi koruyan model. En kötüsü 400 döngüde %60'a düşen. Batarya kalitesi fiyat farkını 2 yılda amorti ediyor. Detaylı test raporu blogda. #batarya #test",
+      "category": "test"
+    },
+    {
+      "id": 11,
+      "text": "IoT cihazlarında en sinir bozucu şey: her marka ayrı uygulama. 5 farklı uygulama, 5 farklı arayüz. Birleşik ekosistem kuran markalar tercih ediyorum. Tek uygulama, tek kontrol paneli, tek hesap. #iot #kullanıcıdeneyimi #akıllıev",
+      "category": "ux"
+    },
+    {
+      "id": 12,
+      "text": "Robot süpürge alırken 3000-5000 TL arası modelleri inceledim. Bu fiyat aralığında lidar haritalama + 3200Pa emiş gücü + app kontrolü olan modeller var. 2 yıl garanti + Türkçe destek olunca karar vermek kolaylaşıyor. #robotsüpürge #öneri",
+      "category": "öneri"
+    },
+    {
+      "id": 13,
+      "text": "Akıllı ev cihazlarını tek tek mi alsam set mi? Deneyimim: Tek tek almak daha iyi. Her cihazı ihtiyaca göre seçiyorsun, hepsi aynı ekosistem olunca uyum sorunu yok. Set alınca bazen ihtiyacın olmayan cihazlar ekleniyor. #akıllıev #alışveriş",
+      "category": "alışveriş"
+    },
+    {
+      "id": 14,
+      "text": "Robot süpürge markalarının garanti sürelerini karşılaştırdım: 6 ay ile 3 yıl arasında değişiyor. Servis hızı ise 48 saat ile 3 hafta arasında. Garanti ve servis hızı alım kararında en önemli 2. faktör (1. faktör: fiyat/performans). #garanti #servis",
+      "category": "garanti"
+    },
+    {
+      "id": 15,
+      "text": "Akıllı priz + zamanlama kombinasyonu ile bu ay %34 tasarruf sağladım. Ama en beğendiğim özellik: uygulamadan hangi cihaz ne kadar tüketiyor anlık görebilmek. Bilgisayar monitörümün standby tüketimini görünce hemen akıllı priz aldım. #tasarruf #akıllıev",
+      "category": "tasarruf"
+    },
+    {
+      "id": 16,
+      "text": "Robot süpürge alırken 'akıllı haritalama' özelliğine dikkat edin. Temel modeller rastgele dolaşıyor, akıllı haritalama odaları tanıyıp programlı temizlik yapıyor. 50m2 evde rastgele model 90 dk sürerken, haritalı model 35 dk'da bitiriyor. #verimlilik",
+      "category": "verimlilik"
+    },
+    {
+      "id": 17,
+      "text": "Türkiye'de akıllı ev başlangıç paketi nasıl olmalı? Benim önerim: 1 akıllı priz + 1 hareket sensörü + 1 kapı sensörü + 1 robot süpürge. Toplam bütçe ~4000-5000 TL. Bu 4 cihaz evin %70'ini otomatikleştiriyor. #akıllıev #başlangıç #bütçe",
+      "category": "başlangıç"
+    },
+    {
+      "id": 18,
+      "text": "Robot süpürge aldıktan sonra öğrendiğim şey: toz haznesi kapasitesi kritik. 300ml'lik hazne 2 günde doluyor, 500ml+ olan 4-5 gün gidiyor. Otomatik boşaltma istasyonu olan modeller var ama fiyat 2 katına çıkıyor. Ben haftada 1 boşaltmayı tercih ediyorum. #pratikbilgi",
+      "category": "pratik"
+    },
+    {
+      "id": 19,
+      "text": "Akıllı evde en çok işime yarayan otomasyon: sabah 7'de perdeler yarım açılıyor, kahve makinesi başlıyor, robot süpürge salonu süpürüp şarj istasyonuna dönüyor. Hepsi birbirine bağlı ama hiçbiri 'otomasyon' gibi hissettirmiyor — sadece ev kendi kendine düzenleniyor. #yaşamkalitesi",
+      "category": "otomasyon"
+    },
+    {
+      "id": 20,
+      "text": "Robot süpürge mi yoksa elektrikli süpürge + serbest zaman mı? 3 yıllık maliyet analizim: robot süpürge 18 ayda kendini amorti ediyor. Ama en büyük kazanç zaman — haftada 3 saat. Saat başı değerim 50 TL olsa, 3 yılda 23.400 TL değerli zaman. #zamanyönetimi",
+      "category": "zaman"
+    }
+  ]
+}

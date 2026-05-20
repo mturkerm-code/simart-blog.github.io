@@ -1,0 +1,41 @@
+name: Twitter Auto Publish
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # 08:00 UTC = 11:00 TR
+    - cron: '0 14 * * *'  # 14:00 UTC = 17:00 TR
+    - cron: '0 18 * * *'  # 18:00 UTC = 21:00 TR
+  workflow_dispatch:  # Manuel trigger için
+
+jobs:
+  post-tweet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install tweepy
+        run: pip install tweepy==4.14.0
+      
+      - name: Run tweet bot
+        env:
+          CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        run: python scripts/post_tweet.py
+        
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tweet-log
+          path: tweet_log.txt
+          retention-days: 7
