@@ -1,0 +1,52 @@
+name: Twitter Browser Publish
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # 08:00 UTC = 11:00 TR
+    - cron: '0 14 * * *'  # 14:00 UTC = 17:00 TR  
+    - cron: '0 18 * * *'  # 18:00 UTC = 21:00 TR
+  workflow_dispatch:  # Manuel trigger
+
+jobs:
+  publish-tweet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install chromium
+      
+      - name: Install xvfb
+        run: sudo apt-get install -y xvfb
+      
+      - name: Publish tweet via browser
+        env:
+          TWITTER_USERNAME: ${{ secrets.TWITTER_USERNAME }}
+          TWITTER_PASSWORD: ${{ secrets.TWITTER_PASSWORD }}
+        run: xvfb-run python scripts/twitter_publish.py
+        
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: publish-screenshots
+          path: screenshots/
+          retention-days: 7
+          
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: publish-log
+          path: publish_log.txt
+          retention-days: 7
