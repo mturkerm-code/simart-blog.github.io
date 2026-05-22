@@ -1,0 +1,31 @@
+name: Bluesky Auto Post
+
+on:
+  schedule:
+    - cron: '0 8,14,18 * * *'
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install aiohttp
+          # Playwright fallback için
+          pip install playwright || true
+          playwright install chromium || true
+      
+      - name: Post to Bluesky
+        env:
+          BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+        run: python scripts/post_bluesky.py
+        continue-on-error: true
